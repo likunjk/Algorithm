@@ -70,11 +70,11 @@ void reconstruct_path(Node &start, Node &end)
 		for(int j=0; j<m; ++j)
 		{
 			if(Map[i][j]==false)
-				printf("0 ");
+				printf("0\t\t");
 			else
-				printf("%c ",record_route[i][j]);
+				printf("%c\t\t",record_route[i][j]);
 		}
-		printf("\n");
+		printf("\n\n\n");
 	}
 }
 
