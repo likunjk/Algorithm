@@ -112,6 +112,8 @@ bool find(char *str)
 	return false;
 }
 
+
+//测试题目：http://hihocoder.com/contest/hiho4/problem/1
 int main(void)
 {
 	int i,n;
