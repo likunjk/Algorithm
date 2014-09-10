@@ -78,11 +78,11 @@ public:
         if(size > capacity)
         {
             --size;
-			p2 = tail->pre;
-			p2->next = NULL;
+            p2 = tail->pre;
+            p2->next = NULL;
             ump.erase(tail->key);
-			delete tail;
-			tail = p2;
+            delete tail;
+            tail = p2;
         }
         if(size <= capacity)
         {
