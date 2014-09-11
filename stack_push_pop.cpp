@@ -15,7 +15,7 @@ map<int, int> ump;
 int data[N];
 stack<int> st;
 
-//本道题就是PAT上判断出栈序列是否合法的加强版，思路是一样的，O(n)的时间复杂度,前提是用unordered_map
+//本道题就是PAT上1051判断出栈序列是否合法的加强版，思路是一样的，O(n)的时间复杂度,前提是用unordered_map
 //测试链接：http://ac.jobdu.com/problem.php?pid=1366
 int main(void)
 {
