@@ -33,7 +33,7 @@ void testNothrow(size_t size)
 		{
 			p = new(std::nothrow) int[size];
 		}catch ( const bad_alloc& e) {
-			cout<<"testExceptionOrNull: Throw Exception\n";
+			cout<<"testNothrow: Throw Exception\n";
 			return;
 		}
 		if(p==NULL)
