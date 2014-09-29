@@ -2,7 +2,7 @@
 using namespace std;
 
 /* 功能: 测试当new失败时究竟是抛出异常还是返回空指针 */
-void testExceptionOrNull(size_t size)
+void testException(size_t size)
 {
 	int *p;
 	while(1)
@@ -11,12 +11,12 @@ void testExceptionOrNull(size_t size)
 		{
 			p = new int[size];
 		}catch ( const bad_alloc& e) {
-			cout<<"testExceptionOrNull: Throw Exception\n";
+			cout<<"testException: Throw Exception\n";
 			return;
 		}
 		if(p==NULL)
 		{
-			cout<<"testExceptionOrNull: p is NULL\n";
+			cout<<"testException: p is NULL\n";
 			return;
 		}
 	}
@@ -46,7 +46,7 @@ void testNothrow(size_t size)
 
 int main(void)
 {	
-	testExceptionOrNull(0xfffffff);	//Throw Exception
+	testException(0xfffffff);	//Throw Exception
 
 	testNothrow(0xfffffff);	//testNothrow: p is NULL
 
