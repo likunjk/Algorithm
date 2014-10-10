@@ -27,7 +27,7 @@ public:
             }
         }
         return dp[index]; 
-	}
+    }
     int wordBreak(string &s, unordered_set<string> &dict) 
     {
         int n = s.length();
@@ -53,9 +53,9 @@ int main(void)
 	dict.insert("and");
 	dict.insert("sand");
 	dict.insert("dog");
-
+	
 	Solution obj;
 	obj.wordBreak(s, dict);
-
+	
 	return 0;
 }
