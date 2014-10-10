@@ -13,7 +13,7 @@ public:
         if(dp[index]!=-1)   //直接返回结果，避免大量重复子问题的计算
             return dp[index];
         
-		dp[index] = 0;
+	dp[index] = 0;
         int n = s.length();
         if(dict.find(s.substr(index, n-index))!=dict.end()) //说明整个串就是一个合法单词
             dp[index]++;
@@ -22,7 +22,7 @@ public:
         {
             if(dict.find(s.substr(index, i-index+1))!=dict.end())
             {
-				int tt = helper(dict, dp, s, i+1);
+		int tt = helper(dict, dp, s, i+1);
                 dp[index] += tt;
             }
         }
@@ -34,7 +34,7 @@ public:
         if(n==0)
             return 0;
         
-		//dp[i]表示从位置i开始到末尾的字符串有几种划分方式, -1表示还未确定
+	//dp[i]表示从位置i开始到末尾的字符串有几种划分方式, -1表示还未确定
         vector<int> dp(n, -1);  
         helper(dict, dp, s, 0);
         
